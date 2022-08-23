@@ -13,7 +13,6 @@ class App extends Component {
     this.deleteShop = this.deleteShop.bind(this);
     this.editShopSubmit = this.editShopSubmit.bind(this);
   }
-  componentWillMount() {}
   addNewShop() {
     this.props.addShop({
       id:
@@ -55,8 +54,8 @@ class App extends Component {
         <div className="row mt-3">
           <div className="col-lg-12">
             <div className="card">
-              <div className="card-header">Shop List App</div>
-              <div className="card-body">
+              <div className="card-header text-center">Shop List App</div>
+              <div className="card-body table-responsive">
                 <table className="table table-hover">
                   <thead className="thead-dark">
                     <tr>
