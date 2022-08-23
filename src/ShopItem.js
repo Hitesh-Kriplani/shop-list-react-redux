@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class ShopItem extends Component {
   constructor(props) {
     super(props);
-    this.state = { isEdit: false };
+    this.state = this.props.isEdit;
     this.editShop = this.editShop.bind(this);
     this.editShopSubmit = this.editShopSubmit.bind(this);
     this.deleteShop = this.deleteShop.bind(this);

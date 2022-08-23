@@ -8,6 +8,7 @@ import { addShop, deleteShop, updateShop } from './actions/shopActions';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = { isEdit: false };
     this.addNewShop = this.addNewShop.bind(this);
     this.deleteShop = this.deleteShop.bind(this);
     this.editShopSubmit = this.editShopSubmit.bind(this);
@@ -27,6 +28,9 @@ class App extends Component {
       openDate: '',
       closeDate: '',
     });
+    this.setState((prevState, props) => ({
+      isEdit: !prevState.isEdit,
+    }));
   }
 
   deleteShop(id) {
@@ -68,6 +72,7 @@ class App extends Component {
                   <ShopList
                     deleteShop={this.deleteShop}
                     shopList={this.props.shopList}
+                    isEdit={this.state}
                     editShopSubmit={this.editShopSubmit}
                   />
                 </table>

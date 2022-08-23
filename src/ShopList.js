@@ -10,6 +10,7 @@ export default class ShopList extends Component {
         shop={item}
         index={index}
         editShopSubmit={this.props.editShopSubmit}
+        isEdit={this.props.isEdit}
         deleteShop={this.props.deleteShop}
       />
     ));
